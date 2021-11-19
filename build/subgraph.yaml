@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: HelloWorld
@@ -16,8 +16,8 @@ dataSources:
         - NameUpdated
       abis:
         - name: HelloWorld
-          file: ./abis/HelloWorld.json
+          file: HelloWorld/abis/HelloWorld.json
       eventHandlers:
         - event: NameUpdated(string,address)
           handler: handleNameUpdated
-      file: ./src/mapping.ts
+      file: HelloWorld/HelloWorld.wasm
